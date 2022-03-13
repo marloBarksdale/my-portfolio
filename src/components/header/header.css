@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+
+}
+
+h4 {
+    width: 400px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.header_buttons {
+    display: flex;
+    gap: 1rem
+}
+
+.arrow {
+    position: absolute;
+    right: 1rem;
+    bottom: 15%;
+    height: 4rem;
+    font-weight: 100;
+
+    animation: myarrow 0.5s linear infinite alternate;
+}
+
+@keyframes myarrow {
+    from {
+        transform: translateY(1rem)
+    }
+
+    to {
+        transform: translateY(0);
+    }
+
+}
