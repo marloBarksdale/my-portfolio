@@ -1,0 +1,31 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    background: var(--primary-alpha);
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 4rem;
+}
+
+
+footer ul {
+    display: flex;
+    gap: 4rem;
+}
+
+footer span {
+    margin-bottom: 2rem;
+
+}
+
+@media(max-width:600px) {
+
+    footer ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}

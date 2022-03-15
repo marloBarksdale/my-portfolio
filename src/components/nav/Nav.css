@@ -10,6 +10,7 @@ nav {
     padding: 0.5rem 2.5rem;
     justify-items: center;
     backdrop-filter: blur(17px);
+    z-index: 100;
 }
 
 
@@ -30,7 +31,7 @@ nav a:hover {
     background: rgb(0, 0, 0 0.3);
 }
 
-nav a.active {
+nav>.active {
 
     background: var(--bg-beta);
     color: var(--color-white);

@@ -1,17 +1,18 @@
 import React from 'react';
-import { FaLongArrowAltDown } from 'react-icons/fa';
+import { FaArrowDown } from 'react-icons/fa';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 import './header.css';
 
 const Header = () => {
   return (
-    <header>
+    <header id='#home'>
       <h1>
         {' '}
-        <span className='text-light'>Hello</span> , I'm Lynden
+        <span className='text-highlight'>Hello</span> , I'm Lynden
       </h1>
 
       <h4>
-        A <span className='text-light'> Fullstack Developer</span> based in
+        A <span className='text-highlight'> Fullstack Developer</span> based in
         Toronto Canada. I enjoy using a wide range of technologies and languages
         to build beautiful and responsive applications.
       </h4>
@@ -23,7 +24,9 @@ const Header = () => {
           Resume
         </a>
       </div>
-      <FaLongArrowAltDown className='arrow' />
+      <MdKeyboardArrowDown className='arrow first' />
+      <MdKeyboardArrowDown className='arrow second' />
+      <MdKeyboardArrowDown className='arrow third' />
     </header>
   );
 };

@@ -1,19 +1,45 @@
 import React from 'react';
 import * as Fa from 'react-icons/fa';
 import * as Md from 'react-icons/md';
+import { Link, animateScroll as scroll } from 'react-scroll';
+
 import './Nav.css';
 const Nav = () => {
   return (
     <nav>
-      <a href='#' className='active'>
+      <Link
+        to='#home'
+        activeClass='active'
+        spy={true}
+        hashSpy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
         <Fa.FaHome />
-      </a>
-      <a href='#portfolio'>
+      </Link>
+      <Link
+        to='portfolio'
+        activeClass='active'
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        hashSpy={true}
+      >
         <Fa.FaCode />
-      </a>{' '}
-      <a href='#contact'>
+      </Link>{' '}
+      <Link
+        to='contact'
+        activeClass='active'
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        hashSpy={true}
+      >
         <Md.MdAlternateEmail />
-      </a>{' '}
+      </Link>{' '}
       <a href='https://github.com/marlobarksdale' target='_blank'>
         <Fa.FaGithub />
       </a>

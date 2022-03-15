@@ -13,7 +13,10 @@ h4 {
     width: 400px;
     text-align: center;
     margin-bottom: 1rem;
+
 }
+
+
 
 .header_buttons {
     display: flex;
@@ -26,17 +29,38 @@ h4 {
     bottom: 15%;
     height: 4rem;
     font-weight: 100;
+    font-size: 2rem;
+    color: var(--primary-alpha);
+    opacity: 0;
 
-    animation: myarrow 0.5s linear infinite alternate;
+}
+
+.arrow.first {
+    animation: myarrow 3s cubic-bezier(0.075, 0.82, 0.165, 1) infinite 2.3s;
+}
+
+.arrow.second {
+    animation: myarrow 3s cubic-bezier(0.075, 0.82, 0.165, 1)infinite 2.5s;
+}
+
+.arrow.third {
+    animation: myarrow 3s cubic-bezier(0.075, 0.82, 0.165, 1)infinite 2.7s;
 }
 
 @keyframes myarrow {
-    from {
-        transform: translateY(1rem)
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
     }
 
-    to {
+    50% {
+        opacity: 1;
         transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
     }
 
 }
