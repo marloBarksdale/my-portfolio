@@ -1,3 +1,14 @@
 #portfolio {
     min-height: 100vh;
 }
+
+
+.swiper-slide {
+    padding-bottom: 2rem;
+}
+
+@media(max-width:600px) {
+    .container.portfolio_container {
+        width: var(--container-sm)
+    }
+}

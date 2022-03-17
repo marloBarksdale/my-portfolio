@@ -29,12 +29,20 @@ const Portfolio = () => {
       <h2>Projects</h2>
       <div className='container portfolio_container'>
         <Swiper
-          // id='portfolio'
-          modules={[Virtual, EffectCoverflow]}
-          spaceBetween={50}
-          slidesPerView={3}
-          virtual
-          effect='coverflow'
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={2}
+          coverflowEffect={{
+            rotate: 80,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={{ dynamicBullets: true }}
+          modules={[EffectCoverflow, Pagination]}
+          className='mySwiper'
         >
           {slides.map((slideContent, index) => (
             <SwiperSlide key={slideContent} virtualIndex={index}>
