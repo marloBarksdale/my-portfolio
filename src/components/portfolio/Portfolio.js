@@ -1,12 +1,24 @@
 import React from 'react';
-import { Virtual } from 'swiper';
+import {
+  Virtual,
+  Navigation,
+  Pagination,
+  Parallax,
+  EffectCards,
+  EffectCoverflow,
+} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './Portfolio.css';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/virtual';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/parallax';
+import 'swiper/css/effect-coverflow';
 import Skills from '../skills/Skills';
+import Card from './Card';
 
 const Portfolio = () => {
   const slides = Array.from({ length: 1000 }).map(
@@ -14,19 +26,24 @@ const Portfolio = () => {
   );
   return (
     <section id='portfolio'>
-      <Swiper
-        // id='portfolio'
-        modules={[Virtual]}
-        spaceBetween={50}
-        slidesPerView={3}
-        virtual
-      >
-        {slides.map((slideContent, index) => (
-          <SwiperSlide key={slideContent} virtualIndex={index}>
-            {slideContent}
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <h2>Projects</h2>
+      <div className='container portfolio_container'>
+        <Swiper
+          // id='portfolio'
+          modules={[Virtual, EffectCoverflow]}
+          spaceBetween={50}
+          slidesPerView={3}
+          virtual
+          effect='coverflow'
+        >
+          {slides.map((slideContent, index) => (
+            <SwiperSlide key={slideContent} virtualIndex={index}>
+              <Card />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
       <Skills />
     </section>
   );
