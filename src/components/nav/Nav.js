@@ -13,8 +13,7 @@ const Nav = () => {
         spy={true}
         hashSpy={true}
         smooth={true}
-        offset={-70}
-        duration={500}
+        duration={10}
       >
         <Fa.FaHome />
       </Link>
@@ -22,9 +21,8 @@ const Nav = () => {
         to='portfolio'
         activeClass='active'
         spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
+        smooth='easeInOutQuint'
+        duration={100}
         hashSpy={true}
       >
         <Fa.FaCode />
@@ -34,8 +32,7 @@ const Nav = () => {
         activeClass='active'
         spy={true}
         smooth={true}
-        offset={-70}
-        duration={500}
+        duration={10}
         hashSpy={true}
       >
         <Md.MdAlternateEmail />

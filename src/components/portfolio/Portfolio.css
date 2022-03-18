@@ -2,6 +2,10 @@
     min-height: 100vh;
 }
 
+.container.portfolio_container {
+    width: var(--container-lg);
+
+}
 
 .swiper-slide {
     padding-bottom: 2rem;
@@ -9,6 +13,11 @@
 
 @media(max-width:600px) {
     .container.portfolio_container {
-        width: var(--container-sm)
+        width: 100%;
     }
+}
+
+.swiper-slide.swiper-slide-visible.swiper-slide-active {
+    display: flex;
+    justify-content: center;
 }
