@@ -50,8 +50,8 @@ const Portfolio = () => {
         >
           {slides.map((slideContent, index) => (
             <SwiperSlide key={slideContent} virtualIndex={index}>
-              {/* <Card /> */}
-              <img src={img} alt='' />
+              <Card />
+              {/* <img src={img} alt='' /> */}
             </SwiperSlide>
           ))}
         </Swiper>

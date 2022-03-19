@@ -11,13 +11,24 @@
     padding-bottom: 2rem;
 }
 
-@media(max-width:600px) {
+
+@media(max-width:1024px) {
     .container.portfolio_container {
-        width: 100%;
+        width: 85%;
     }
 }
 
-.swiper-slide.swiper-slide-visible.swiper-slide-active {
+@media(max-width:600px) {
+    .container.portfolio_container {
+        width: 99.8%;
+    }
+}
+
+
+
+
+
+/* .swiper-slide.swiper-slide-visible.swiper-slide-active {
     display: flex;
     justify-content: center;
-}
+} */

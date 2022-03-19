@@ -1,8 +1,7 @@
 import React from 'react';
-import { FaArrowDown } from 'react-icons/fa';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import './header.css';
-
+import { Link } from 'react-scroll';
 const Header = () => {
   return (
     <header id='#home'>
@@ -17,12 +16,19 @@ const Header = () => {
         to build beautiful and responsive applications.
       </h4>
       <div className='header_buttons'>
-        <a className='btn' href='#portfolio'>
+        <Link
+          to='portfolio'
+          activeClass='active'
+          spy={true}
+          hashSpy={true}
+          smooth='easeInOutQuad'
+          duration={1000}
+          isDynamic={true}
+          className='btn'
+        >
           My Projects
-        </a>
-        <a className='btn btn-primary' href=''>
-          Resume
-        </a>
+        </Link>
+        <a className='btn btn-primary'>Resume</a>
       </div>
       <MdKeyboardArrowDown className='arrow first' />
       <MdKeyboardArrowDown className='arrow second' />

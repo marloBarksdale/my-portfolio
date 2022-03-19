@@ -1,9 +1,9 @@
 import React from 'react';
 import * as Fa from 'react-icons/fa';
 import * as Md from 'react-icons/md';
-import { Link, animateScroll as scroll } from 'react-scroll';
-
+import { Link } from 'react-scroll';
 import './Nav.css';
+
 const Nav = () => {
   return (
     <nav>
@@ -12,8 +12,9 @@ const Nav = () => {
         activeClass='active'
         spy={true}
         hashSpy={true}
-        smooth={true}
-        duration={10}
+        smooth='easeInOutQuad'
+        duration={1000}
+        isDynamic={true}
       >
         <Fa.FaHome />
       </Link>
@@ -21,23 +22,29 @@ const Nav = () => {
         to='portfolio'
         activeClass='active'
         spy={true}
-        smooth='easeInOutQuint'
-        duration={100}
+        smooth='easeInOutQuad'
+        duration={1000}
         hashSpy={true}
+        isDynamic={true}
       >
         <Fa.FaCode />
-      </Link>{' '}
+      </Link>
       <Link
         to='contact'
         activeClass='active'
         spy={true}
-        smooth={true}
-        duration={10}
+        smooth='easeInOutQuad'
+        duration={1000}
         hashSpy={true}
+        isDynamic={true}
       >
         <Md.MdAlternateEmail />
-      </Link>{' '}
-      <a href='https://github.com/marlobarksdale' target='_blank'>
+      </Link>
+      <a
+        href='https://github.com/marlobarksdale'
+        target='_blank'
+        rel='noreferrer'
+      >
         <Fa.FaGithub />
       </a>
     </nav>

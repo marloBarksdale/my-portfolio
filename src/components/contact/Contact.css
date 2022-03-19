@@ -3,6 +3,7 @@
     grid-template-columns: 2fr 1fr;
     gap: 6rem;
     width: 70%;
+    min-height: 100vh;
 }
 
 .container.contact_container form {
@@ -63,12 +64,6 @@
 
 
 }
-
-
-
-
-
-
 
 @media (max-width:600px) {
     .container.contact_container {

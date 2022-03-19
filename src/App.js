@@ -12,11 +12,10 @@ function App() {
       <Header />
       <Nav />
       <Portfolio />
-      {/* <About /> */}
-      {/* <Skills /> */}
-
       <Contact />
       <Footer />
+      {/* <About /> */}
+      {/* <Skills /> */}
     </div>
   );
 }
